@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: recupere le code
         uses: actions/checkout@v2
+      - name: installation de NODE.JS
+        run: sudo apt update && sudo apt install nodejs -y
       - name: installation des dependances
         run: npm ci # ci=clean and install : pour installer de maniere propre toutes les dependances
       - name: Message de fin

@@ -2,5 +2,10 @@
   "$schema": "https://unpkg.com/release-it/schema/release-it.json",
   "github": {
     "release": true
+  },
+
+  "git": {
+    "requireBranch": "main",
+    "commitMessage": "petite realise : realease v${version}"
   }
 }
