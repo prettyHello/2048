@@ -8,10 +8,10 @@ on: workflow_dispatch
 #      - main
 jobs:
   run-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: recupere le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: installation des dependances
         run: npm ci # ci=clean and install : pour installer de maniere propre toutes les dependances
       - name: Message de fin
