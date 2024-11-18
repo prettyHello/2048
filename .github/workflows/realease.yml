@@ -1,0 +1,18 @@
+name: realease and publish
+on: workflow_dispatch:
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: recupere le code
+        uses: actions/checkout@v4
+      - name: installation des dependances
+        run: npm ci # ci=clean and install : pour installer de maniere propre toutes les dependances
+      - name: Message de fin
+        run: echo "ALL DONE !"
