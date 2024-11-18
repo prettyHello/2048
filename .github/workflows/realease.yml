@@ -13,8 +13,13 @@ jobs:
       - name: recupere le code
         uses: actions/checkout@v2
       - name: installation de NODE.JS
-        run: sudo apt update && sudo apt install nodejs -y
+#        run: sudo apt update && sudo apt install nodejs -y
+        uses: actions/setup-node@v4
       - name: installation des dependances
         run: npm ci # ci=clean and install : pour installer de maniere propre toutes les dependances
+      - name: initialisation du user git
+        run: |
+            git config --global user.email "anicetsiewe@gmail.com"
+            git config --global user.name "anicetsiewe@gmail.com"
       - name: Message de fin
         run: echo "ALL DONE !"
