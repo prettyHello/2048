@@ -1,12 +1,12 @@
 name: CI
 
-on:
-  workflow_call:
-  workflow_dispatch:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: workflow_dispatch
+#  workflow_call:
+#  workflow_dispatch:
+#  push:
+#    branches: [main]
+#  pull_request:
+#    branches: [main]
 
 jobs:
   quality-assurance:
